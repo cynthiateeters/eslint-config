@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="max-width: 100ch; line-height: 1.8;">
+    <h2><strong>Overview</strong></h2>
+    <p style="padding-left: 40px;"><span style="color: #e67e23; font-size: 18pt;">ESLint is a wild pony.</span></p>
+    <p style="padding-left: 40px;"><img src="images/Artboard 68.png"
+        alt="illustration of happy horse https://www.vecteezy.com/vector-art/446550-animal-doodle-for-horse "
+        width="185" height="270"
+        data-api-endpoint="https://raritanval.instructure.com/api/v1/courses/3328453/files/218087462"
+        data-api-returntype="File" /></p>
+    <p style="padding-left: 40px;"><a class="inline_disabled"
+        href="https://www.vecteezy.com/vector-art/446550-animal-doodle-for-horse" target="_blank" rel="noopener"> <span
+          style="font-size: 10pt;">Illustration by Graphics RF</span> </a></p>
+    <p style="padding-left: 40px;">It can be very hard to wrangle and tame. But once you do, it is by far your best
+      coding
+      buddy during those lonely days in the saddle.&nbsp;</p>
+    <p style="padding-left: 40px;"><em>Hope you like this silly metaphor.</em></p>
+    <p style="padding-left: 40px;">In this short assignment you will take an empty repo and configure it for modern web
+      development using:</p>
+    <ul style="line-height: 2.2;">
+      <li style="list-style-type: none;">
+        <ul style="line-height: 2.2;">
+          <li style="list-style-type: none;">
+            <ul style="line-height: 2.2;">
+              <li>vscode</li>
+              <li>eslint</li>
+              <li>airbnb</li>
+              <li>prettier</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <p style="padding-left: 40px;"><strong><span style="font-size: 14pt; color: #169179;">If you do it all correctly,
+          your
+          tools will turn bad code into good code.</span></strong></p>
+    <h3><strong>&nbsp;</strong></h3>
+    <h3><strong>What are ESLint, Airbnb, and Prettier</strong></h3>
+    <p style="padding-left: 40px;"><span style="font-size: 14pt;"><strong><span style="color: #169179;">Be sure to do
+            the
+            assigned reading <a style="color: #169179;" title="NPM Tools for a Modern Web Developer"
+              href="https://raritanval.instructure.com/courses/3328453/pages/npm-tools-for-a-modern-web-developer"
+              data-api-endpoint="https://raritanval.instructure.com/api/v1/courses/3328453/pages/npm-tools-for-a-modern-web-developer"
+              data-api-returntype="Page"> NPM Tools for a Modern Web Developer </a> to get a better understanding of
+            these
+            tools.</span></strong></span></p>
+    <h3><strong>&nbsp;</strong></h3>
+    <h3><strong>Configuring VS Code Using Its settings.json Configuration File</strong></h3>
+    <p style="padding-left: 40px;">VS Code can be configured to help work with, and not against, your tool
+      configurations.
+      It comes configured with a long list of settings, each of which has a default.</p>
+    <p style="padding-left: 40px;">To increase the flexibility of VS Code, its settings can be configured both globally
+      (user) and per project (workspace). <a href="https://code.visualstudio.com/docs/getstarted/settings"
+        target="_blank" rel="noopener">https://code.visualstudio.com/docs/getstarted/settings</a>&nbsp;</p>
+    <p style="padding-left: 40px;">User settings, when present, override VS Code's default settings.</p>
+    <p style="padding-left: 40px;">Workspace settings, when present, override user settings. <span>The workspace
+        settings
+        file (settings.json) is located under the&nbsp;</span><code>.vscode</code><span>&nbsp;folder in your root
+        folder.&nbsp;</span></p>
+    <p style="padding-left: 40px;">&nbsp;</p>
+    <p style="padding-left: 40px;"><img src="images/vscode-settings-1.png" alt="vs code file listing" width="450"
+        height="500" data-api-endpoint="https://raritanval.instructure.com/api/v1/courses/3328453/files/218469853"
+        data-api-returntype="File" /></p>
+    <p style="padding-left: 40px;">&nbsp;</p>
+    <p style="padding-left: 40px;"><span>We will make use of this file so that you produce code which is standard to my
+        liking. This helps you create code which is easy to read. It also helps when you work as a team, since your code
+        will be standard between team members.</span></p>
+    <h2><strong>&nbsp;</strong></h2>
+    <h2><strong>Instructions</strong> <strong></strong></h2>
+    <h3 style="padding-left: 40px;"><strong>&nbsp;</strong></h3>
+    <h3 style="padding-left: 40px;"><strong>Clone Your Repo</strong></h3>
+    <ol style="line-height: 2.2;">
+      <li style="list-style-type: none;">
+        <ol style="line-height: 2.2;">
+          <li><span> Have your development environment set up<br /></span></li>
+          <li>Accept the GitHub Classroom assignment <span style="color: #169179;"> <strong> <a class="inline_disabled"
+                  style="color: #169179;" href="https://classroom.github.com/a/quIpuRpV" target="_blank" rel="noopener">
+                  https://classroom.github.com/a/quIpuRpV </a> </strong> </span> &nbsp;</li>
+          <li>Clone your new GitHub repo to a new folder&nbsp;<span> (<strong>DO NOT USE</strong> a cloud storage folder
+              -
+              One Drive, Google Drive, Dropbox, etc. - for your local repos)</span><br /><br /></li>
+        </ol>
+      </li>
+    </ol>
+    <h3 style="padding-left: 40px;"><strong>Create a .vscode/settings.json file for VS Code</strong></h3>
+    <ol style="line-height: 2.2;">
+      <li style="list-style-type: none;">
+        <ol style="line-height: 2.2;">
+          <li><a class="inline_disabled" href="https://qvault.io/clean-code/line-breaks-vs-code-lf-vs-crlf/"
+              target="_blank" rel="noopener"> Read How to Get Consistent Line Breaks in VS Code (LF vs CRLF) </a></li>
+          <li>In this class, we will standardize a rule that says all your code will have LF line breaks (not CRLF)</li>
+          <li>Along with setting LF as the rule, I have collected together other VS Code settings that I would like
+            standard in your repos&nbsp;</li>
+          <li>Create a <span style="color: #000c93; font-size: 14pt;">.vscode/settings.json</span> file (<strong>that
+              leading "dot" is very important, so don't leave it off) </strong>and copy the contents from my Gist:&nbsp;
+            <strong> <br /></strong><a href="https://gist.github.com/cynthiateeters/e9fc9de112bf5aabb24828a635c2b301"
+              target="_blank"
+              rel="noopener">https://gist.github.com/cynthiateeters/e9fc9de112bf5aabb24828a635c2b301</a>&nbsp;
+            &nbsp;<strong> <br /></strong>
+          </li>
+          <li>Take note of what is in your new settings.json file.</li>
+          <li>Choose <strong>any setting</strong> you like from that file, Google search it, and find a useful resource
+            that helps you understand it. (For example, you could search for "editor.formatOnPaste": true)<br />Then
+            write, in your own words, a 1 paragraph explanation of what that setting does. Later you'll put that
+            paragraph
+            and link in README.md as well as word document for this assignment's submission.</li>
+          <li><strong> <span style="color: #047f00; font-size: 14pt;">CPR</span> </strong></li>
+        </ol>
+      </li>
+    </ol>
+    <p>&nbsp;</p>
+    <h3 style="padding-left: 40px;"><strong>Add a .gitignore file</strong></h3>
+    <ol style="line-height: 2.2;">
+      <li style="list-style-type: none;">
+        <ol style="line-height: 2.2;">
+          <li>Create a <span style="color: #000c93; font-size: 14pt;">.gitignore</span> file (<strong>that leading "dot"
+              is very important, so don't leave it off) </strong>and copy the contents from this generator:&nbsp;
+            <strong>
+              <br /></strong>
+            <div>
+              <div><a href="https://www.toptal.com/developers/gitignore/api/node,linux,macos,windows,visualstudiocode"
+                  target="_blank" rel="noopener">
+                  https://www.toptal.com/developers/gitignore/api/node,linux,macos,windows,visualstudiocode </a> &nbsp;
+              </div>
+            </div>
+          </li>
+          <li>Notice inside your .gitignore you have this snippet <br />
+            <pre>### VisualStudioCode ###
+  .vscode/*
+  !.vscode/settings.json
+  !.vscode/tasks.json
+  !.vscode/launch.json
+  !.vscode/extensions.json
+  *.code-workspace</pre>
+            The star means match everything and the ! means not. So this tells git to ignore some files in the .vscode
+            folder but not (!) files like your .vscode/settings.json file. <br /><br /><strong>NOTE</strong>: By
+            default,
+            git ignores empty folders. So if you create the .vscode folder and not any file inside of it, the folder
+            will
+            not get pushed to the remote repo.
+          </li>
+          <li><strong> <span style="color: #047f00; font-size: 14pt;">CPR</span> </strong> <span
+              style="font-size: 12pt;">
+              <br /><br /></span></li>
+        </ol>
+      </li>
+    </ol>
+    <h3 style="padding-left: 40px;"><span style="font-size: 18pt;"> <strong>Create </strong> <strong>a package.json
+          file</strong> </span> <strong></strong></h3>
+    <ol style="line-height: 2.2;">
+      <li style="list-style-type: none;">
+        <ol style="line-height: 2.2;">
+          <li>Create your package.json file by typing in the terminal (the flag --yes tells npm to take default values)
+            <br />
+            <pre>npm init --yes</pre>
+          </li>
+          <li><strong> <span style="color: #047f00; font-size: 14pt;">CPR</span> </strong> &nbsp; <br /><br /></li>
+        </ol>
+      </li>
+    </ol>
+    <h3 style="padding-left: 40px;"><strong>Install and configure eslint</strong> <strong></strong></h3>
+    <p>&nbsp;</p>
+    <ol style="line-height: 2.2;">
+      <li style="list-style-type: none;">
+        <ol style="line-height: 2.2;">
+          <li>Inside VS Code's integrated terminal, run the command&nbsp; <br />
+            <pre>npm install eslint --save-dev</pre>
+          </li>
+          <li>In the integrated terminal, initialize eslint with the command
+            <pre>npx eslint --init </pre>
+          </li>
+          <li>&nbsp;<strong>You'll answer the eslint's questions using the up/down arrow keys and enter
+              key.&nbsp;</strong></li>
+          <li>&nbsp;Answer these questions with these answers: <br /><strong>How would you like to use ESLint?</strong>
+            <span style="color: #0e86f8;">To check syntax, find problems, and enforce code style</span>
+            <br /><strong>What
+              type of modules does your project use?</strong> <span style="color: #0e86f8;">None of these</span>
+            <br /><strong>Which framework does your project use?</strong> <span style="color: #0e86f8;">None of
+              these</span> <br /><strong>Does your project use TypeScript?</strong> <span
+              style="color: #0e86f8;">No</span> <br /><strong>Where does your code run?</strong> <span
+              style="color: #0e86f8;">Node</span> <br /><strong>How would you like to define a style for your
+              project?</strong> <span style="color: #0e86f8;">Use a popular style guide</span> <br /><strong>Which style
+              guide do you want to follow?</strong> <span style="color: #0e86f8;"> Airbnb: <a style="color: #0e86f8;"
+                href="https://github.com/airbnb/javascript" target="_blank" rel="noopener">
+                https://github.com/airbnb/javascript </a> </span> <br /><strong>What format do you want your config file
+              to be in?</strong> <span style="color: #0e86f8;"> <span style="color: #0e86f8;"> JSON <br /></span>
+            </span>
+            <p><span style="font-size: 10pt;">Checking peerDependencies of eslint-config-airbnb-base@latest</span>
+              <br /><span style="font-size: 10pt;">The config that you've selected requires the following
+                dependencies:</span>
+            </p>
+            <p><span style="font-size: 10pt;">eslint-config-airbnb-base@latest eslint@^5.16.0 || ^6.8.0 || ^7.2.0
+                eslint-plugin-import@^2.22.1</span></p>
+            <strong>Would you like to install them now with npm?</strong> <span style="color: #0e86f8;">yes</span>
+            <br /><span style="font-size: 10pt;"> Installing eslint-config-airbnb-base ... <br /><br /></span>
+          </li>
+          <li>The tool should now run and create a .eslintrc.json file</li>
+          <li>The file should look like this: <a href="https://bit.ly/3nfV78p" target="_blank" rel="noopener">
+              https://bit.ly/3nfV78p </a> &nbsp;<strong></strong></li>
+          <li>And the package.json file should have the following dev dependencies:&nbsp;
+            <div>
+              <div><span>&nbsp; &nbsp;</span> <span>eslint</span></div>
+              <div><span>&nbsp;&nbsp;&nbsp; </span> <span>eslint-config-airbnb-base</span></div>
+              <div><span>&nbsp;&nbsp;&nbsp; </span> <span>eslint-plugin-import</span></div>
+            </div>
+          </li>
+          <li>If steps 6 and 7 are not true, delete the .eslintrc.json file and try the npx eslint --init command over
+            again</li>
+          <li>Inside the .eslintrc.json file add the following rules to the rules section <br />
+            <pre><code>"no-console": "off",
+  "no-trailing-spaces": "error"</code></pre>
+          </li>
+          <li>NOTE: Later in this assignment you will be asked to research no-trailing-spaces and explain why we have
+            that
+            rule.</li>
+          <li>Inside VS Code, install the eslint extension by Dirk Baeumer</li>
+          <li><span style="font-family: inherit; font-size: 14pt; color: #000080;"> <strong> <span
+                  style="color: #047f00;">CPR</span> </strong> </span></li>
+        </ol>
+      </li>
+    </ol>
+    <h3 style="padding-left: 40px;"><strong>&nbsp;</strong></h3>
+    <h3 style="padding-left: 40px;"><strong>Install and configure prettier</strong></h3>
+    <ol style="line-height: 2.2;">
+      <li style="list-style-type: none;">
+        <ol style="line-height: 2.2;">
+          <li>Inside VS Code's integrated terminal, run the command&nbsp; <br />
+            <pre>npm install prettier --save-dev</pre>
+          </li>
+          <li>Then <strong>follow the installation instructions</strong> in the README for the npm package:&nbsp;
+            <br /><a href="https://github.com/prettier/eslint-config-prettier" target="_blank" rel="noopener">
+              https://github.com/prettier/eslint-config-prettier </a> &nbsp;<br />You'll have to do an npm install and
+            an
+            edit of .eslintrc.json file
+          </li>
+          <li>Notice you have to edit .eslintrc as part of the above instructions (<strong>DO NOT</strong> forget to add
+            the comma after&nbsp; "airbnb-base" or you will create an error. )<br />Things tend to go kafloo-ey when you
+            create errors in your config files.</li>
+          <li>Inside VS Code, install (or if installed, make sure it is enabled) the prettier extension</li>
+          <li><span style="font-family: inherit; font-size: 14pt; color: #000080;"> <strong> <span
+                  style="color: #047f00;">CPR</span> </strong> </span></li>
+        </ol>
+      </li>
+    </ol>
+    <p>&nbsp;</p>
+    <h3 style="padding-left: 40px;"><strong>Create an index.js file</strong></h3>
+    <ol style="line-height: 2.2;">
+      <li style="list-style-type: none;">
+        <ol style="line-height: 2.2;">
+          <li>In the repo root, create an index.js file.</li>
+          <li>Notice the code at <a href="https://bit.ly/2YIUlq5" target="_blank" rel="noopener"> https://bit.ly/2YIUlq5
+            </a> &nbsp;</li>
+          <li>I made it funky on purpose with a code error and plenty of extraneous spaces</li>
+          <li>Copy it into your index.js and in a second or two, if the eslint and prettier extensions are working with
+            their configuration files, you should get code something like this: <br /><br /><img
+              src="images/copy-n-paste-code.png" alt="screen shot showing the code after copy-n-paste" width="466"
+              height="257" data-api-endpoint="https://raritanval.instructure.com/api/v1/courses/3328453/files/218090771"
+              data-api-returntype="File" /> <br /><br /></li>
+          <li><span style="color: #ba372a;"> <strong>IF YOU HAVE</strong> </span> lots more extra spaces and/or no red
+            squigglies and/or a squiggly under console.log and/or no semi-colons, your repo is not correctly configured.
+            <br /><span style="color: #169179;"> <strong>&nbsp; &nbsp; &nbsp;STOP WHAT YOU'RE DOING -&gt; TROUBLESHOOT
+                THE
+                PROBLEM -&gt; ASK FOR HELP</strong> </span>
+          </li>
+          <li><strong> <span style="color: #236fa1;">IF IT'S GOOD</span></strong>: you'll notice how prettier fixed some
+            spacing problems and added missing semi-colons. What is left are problems that eslint has flagged for
+            fixing.
+          </li>
+          <li>Hover over the squigglies, see why eslint is unhappy,&nbsp; and get everything fixed. (<strong>DO
+              NOT</strong> add comments to disable eslint as your fix)</li>
+          <li>When prettier and eslint are happy, change the word <strong>badly</strong> to the word
+            <strong>nicely</strong> in the comment
+          </li>
+          <li>Save the file</li>
+          <li><span style="font-family: inherit; font-size: 14pt; color: #000080;"> <strong> <span
+                  style="color: #047f00;">CPR</span></strong></span><strong
+              style="font-family: inherit; font-size: 1.5em;">&nbsp;</strong></li>
+        </ol>
+      </li>
+    </ol>
+    <p>&nbsp;</p>
+    <h3 style="padding-left: 40px;"><strong>Edit the README file</strong></h3>
+    <ol style="line-height: 2.2;">
+      <li style="list-style-type: none;">
+        <ol style="line-height: 2.2;">
+          <li>Edit the <span style="color: #000080; font-size: 14pt;">README.md</span> file, delete what is there, and
+            include a new level 1 heading with your choice for a title. <span
+              style="font-family: inherit; font-size: 1rem;"> <br /></span></li>
+          <li><span style="font-family: inherit; font-size: 1rem;"> Add a level 2 subheading saying Let's Learn a VS
+              Code
+              Setting <br /></span></li>
+          <li><span style="font-family: inherit; font-size: 1rem;">&nbsp;Add your paragraph explaining the setting you
+              chose to research</span></li>
+          <li><span style="font-family: inherit; font-size: 1rem;"> Include your chosen setting and its current value as
+              code using escaping backticks - &nbsp;<a
+                href="https://www.markdownguide.org/basic-syntax/#escaping-backticks" target="_blank"
+                rel="noopener">https://www.markdownguide.org/basic-syntax/#escaping-backticks</a> or <a
+                href="https://www.markdownguide.org/extended-syntax/#fenced-code-blocks" target="_blank"
+                rel="noopener">https://www.markdownguide.org/extended-syntax/#fenced-code-blocks</a>&nbsp;<br />Example
+              using single backticks: `"editor.formatOnPaste":&nbsp; true`<br /></span></li>
+          <li><span style="font-family: inherit; font-size: 1rem;"> Include the link to your resource; use []() markdown
+              format for a link <a href="https://www.markdownguide.org/basic-syntax/#links" target="_blank"
+                rel="noopener"> https://www.markdownguide.org/basic-syntax/#links </a> &nbsp; </span></li>
+          <li><span style="font-family: inherit; font-size: 1rem;">Add another </span> <span
+              style="font-family: inherit; font-size: 1rem;"> level 2 subheading saying Let's Learn an ESLint Rule
+              <br /></span></li>
+          <li><span style="font-family: inherit; font-size: 1rem;">&nbsp;Google search for the
+              following<br />"no-trailing-spaces": "error" site:https://eslint.org/</span></li>
+          <li><span style="font-family: inherit; font-size: 1rem;">In Eslint.org, find the documentation for that
+              rule</span></li>
+          <li><span style="font-family: inherit; font-size: 1rem;">Add your paragraph explaining (in your own words) why
+              that rule is important (when they say source control systems, we should think git and GitHub)</span></li>
+          <li><span style="font-family: inherit; font-size: 1rem;">Include the link (in proper markdown) to that ESLint
+              documentation page</span></li>
+          <li><span style="font-family: inherit; font-size: 14pt; color: #000080;"> <strong> <span
+                  style="color: #047f00;">CPR</span> </strong> <br /></span></li>
+        </ol>
+      </li>
+    </ol>
+    <p>&nbsp;</p>
+    <h3 style="padding-left: 40px;"><strong>Screen Shot your README &amp; commits history page</strong></h3>
+    <ol style="line-height: 2.2;">
+      <li style="list-style-type: none;">
+        <ol style="line-height: 2.2;">
+          <li>Screen shot your README from the GitHub page (what I call your repo homepage)</li>
+          <li>Screen shot your commits history page <br /><strong> <br /></strong></li>
+        </ol>
+      </li>
+    </ol>
+    <h3 style="padding-left: 40px;"><strong>Critique This Assignment</strong></h3>
+    <p style="padding-left: 40px;">Give me a truthful estimate of the time you took on this project.</p>
+    <p style="padding-left: 40px;">Is there anything you liked or disliked about this assignment? Feel free to discuss
+      both your likes and dislikes (just make sure I can tell which is which 😉).</p>
+    <p style="padding-left: 40px;">How could this assignment be improved?</p>
+    <p>&nbsp;</p>
+    <h2><strong>Assignment Submission Requirements</strong></h2>
+    <p style="padding-left: 40px;">When you have completed the assignment, submit a word document with the
+      following<strong>:</strong></p>
+    <ol style="line-height: 2.2;">
+      <li style="list-style-type: none;">
+        <ol style="line-height: 2.2;">
+          <li style="list-style-type: none;">
+            <ol style="line-height: 2.2;">
+              <li>screen shot your GitHub homepage</li>
+              <li>screen shot your GitHub repo's commit "History" page</li>
+              <li>your paragraph explanation and link to one of our VS Code's settings</li>
+              <li>your paragraph explanation and link to no-trailing-whitespaces rule</li>
+              <li>your critique</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p style="padding-left: 40px;">Upload your word document to submit this assignment.</p>
+    <p style="padding-left: 40px;">&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+  <p>;</p>
+</body>
+
+</html>
