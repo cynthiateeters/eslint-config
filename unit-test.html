@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      max-width: 80ch;
+      font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<div style="max-width: 95ch; line-height: 1.8;">
+  <h2><strong>Overview</strong></h2>
+  <p style="padding-left: 40px;">This assignment has you writing code that implements your expected JavaScript skills at
+    this point.&nbsp;</p>
+  <h3 style="padding-left: 40px;">JavaScript Concepts</h3>
+  <p style="padding-left: 40px;">These concepts are covered in Chapter 3 of your textbook.&nbsp;</p>
+  <ol style="line-height: 2.2;">
+    <li style="list-style-type: none;">
+      <ol style="line-height: 2.2;">
+        <li style="list-style-type: none;">
+          <ul style="line-height: 2.3;">
+            <li>JavaScript Comments - // and /* */</li>
+            <li>Semicolons</li>
+            <li>Declarations</li>
+            <li>Assignments</li>
+            <li>The keywords let and const</li>
+            <li>Literals</li>
+            <li>Primitives</li>
+            <li>Strings, string literals using single '' and double "" quotes (our Airbnb style guide calls for using
+              single quotes!)</li>
+            <li>String template literals</li>
+            <li>Booleans, truthy vs falsy</li>
+            <li>Immutability</li>
+          </ul>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <p>&nbsp;</p>
+  <h3 style="padding-left: 40px;">Modern Development Practices</h3>
+  <p style="padding-left: 40px;">In addition, in this assignment you'll be introduced to the following modern web
+    development practices:</p>
+  <ul style="line-height: 2.2;">
+    <li style="list-style-type: none;">
+      <ul>
+        <li style="list-style-type: none;">
+          <ul>
+            <li>Linting code (eslint <a href="https://eslint.org/" target="_blank"
+                rel="noopener">https://eslint.org/</a> )</li>
+            <li>Using a coding styleguide (Airbnb JS Styleguide <a href="https://github.com/airbnb/javascript"
+                target="_blank" rel="noopener">https://github.com/airbnb/javascript</a> )</li>
+            <li>Unit testing as a very needed part of coding (Jest Delightful JS Testing <a href="https://jestjs.io/"
+                target="_blank" rel="noopener">https://jestjs.io/</a> )</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <h2><strong>How to Solve Coding Problems</strong></h2>
+  <p style="padding-left: 40px;">As brain scientists are discovering, learning to program may require both the language
+    areas of the brain and what they call multiple demand systems that are spread throughout the frontal and parietal
+    lobes of the brain. These multiple demand systems are activated when we need to hold many pieces of information in
+    mind at once.<span style="margin-left: 5px;"><a
+        href="https://neurosciencenews.com/computer-code-language-processing-17439/" target="_blank" rel="noopener">(To
+        the Brain, Reading Computer Code Is Not the Same as Reading Language)</a>&nbsp;</span></p>
+  <p style="padding-left: 40px;">Remember this as you go through these coding exercises. Deciding how to solve a coding
+    problem can be compared to solving a puzzle. Have paper and pencil beside you and don't be afraid to doodle
+    questions to yourself, outline the problem with pseudocode, write out candidate skills from the above list and write
+    out candidate code before trying it out in VS Code.</p>
+  <p style="padding-left: 80px;"><span style="font-size: 13pt;"><strong>What is pseudocode, you ask. Don't ask me.
+        Google it!</strong></span> <span style="font-size: 13pt;">If you are not a good googler, Google search "How to
+      Google search JavaScript solutions" and see what you learn.<br /><br /></span></p>
+  <div style="padding-left: 40px;">
+    <div style="margin-left: 40px; padding: 1rem; border: 1px solid #030303; width: max-content;">
+      <blockquote class="twitter-tweet">
+        <p dir="ltr" lang="en">You know that "Googling" is one of the top 5 skills for web developers?<br /><br />Here 7
+          tips to master it<br /><br />&darr;</p>
+        &mdash; Nick Bull (@nickbulljs) <a
+          href="https://twitter.com/nickbulljs/status/1355789724808601602?ref_src=twsrc%5Etfw">January 31, 2021</a>
+      </blockquote>
+    </div>
+  </div>
+  <p style="padding-left: 40px;">&nbsp;</p>
+  <h2><strong>What is Unit Testing</strong></h2>
+  <p style="padding-left: 40px;">Read this short intro to unit testing and Jest.</p>
+  <p style="padding-left: 40px;"><a href="https://www.testim.io/blog/best-unit-testing-framework-for-javascript/"
+      target="_blank" rel="noopener">https://www.testim.io/blog/best-unit-testing-framework-for-javascript/</a>&nbsp;
+  </p>
+  <p>&nbsp;</p>
+  <h2><strong>Use Jest to Test</strong></h2>
+  <p style="padding-left: 40px;">In this assignment you'll be given a series of coding skills to master. Inside the
+    given JavaScript files, I have put in the Jest tests. You will do the assignment by adding the required code and
+    when you run Jest, it will give you feedback as to whether your code is correct.</p>
+  <p style="padding-left: 40px;"><span style="font-size: 14pt;"><strong>You are welcome (actually encouraged) to read
+        the test code but you should not change it.</strong></span></p>
+  <p>&nbsp;</p>
+  <h2><strong>Use Better Comments&nbsp;</strong></h2>
+  <p style="padding-left: 40px;">JavaScript comments has no built-in formatting. On the one hand, this is great as it is
+    only plain text. On the other hand, it is hard for a comment writer to convey special information. The VS Code
+    extension called <a class="inline_disabled"
+      href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments" target="_blank"
+      rel="noopener">Better Comments</a> by Aaron Bond can display comments in different colors. With this extension
+    installed, you'll see that the comments in your given JavaScript files are color coded for improved readability.</p>
+  <p style="padding-left: 40px;">In the below example, the comments are color coded:</p>
+  <ul>
+    <li style="list-style-type: none;">
+      <ul>
+        <li style="list-style-type: none;">
+          <ul>
+            <li><span style="color: #236fa1;">? blue - information</span></li>
+            <li><span style="color: #ba372a;">! red - start of each challenge</span></li>
+            <li><span style="color: #e67e23;">TODO: yellow - instructions on what to do</span></li>
+            <li><span style="color: #169179;">* green - placeholder for where to write your code</span></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p style="padding-left: 40px;">&nbsp;</p>
+  <p style="padding-left: 40px;"><img src="images/bc.png" alt="better comments color coding example" width="700"
+      height="595" data-api-endpoint="https://raritanval.instructure.com/api/v1/courses/3328453/files/216868694"
+      data-api-returntype="File" /></p>
+  <p style="padding-left: 40px;">&nbsp;</p>
+  <p style="padding-left: 40px;">&nbsp;</p>
+  <h2><strong>There Are Many Files in This Repo</strong></h2>
+  <p style="padding-left: 40px;">In this repo I am giving you a whole lot of files. As they are meant for configuration,
+    most of these you do not have to touch. You are encouraged to open them in your editor to see what they are doing.
+  </p>
+  <p style="padding-left: 40px;">&nbsp;</p>
+  <h2><strong>Instructions</strong><strong></strong></h2>
+  <h3 style="padding-left: 40px;"><strong>&nbsp;</strong></h3>
+  <h3 style="padding-left: 40px;"><strong>Clone Your Repo</strong></h3>
+  <ol style="line-height: 2.2;">
+    <li style="list-style-type: none;">
+      <ol style="line-height: 2.2;">
+        <li>Accept the project's GitHub Classroom assignment. <strong><span
+              style="color: #169179;">https://classroom.github.com/a/K6QygbDa</span></strong></li>
+        <li>Make sure the Better Comments extension is installed<strong></strong></li>
+        <li><strong>Read the README in your GitHub repo homepage - your instructions are there</strong></li>
+        <li>Clone your new GitHub repo to a new VS Code Workspace&nbsp;<span> (<strong>DO NOT USE</strong> a cloud
+            storage folder - One Drive, Google Drive, Dropbox, etc. - for your local repos)</span><br /><br /></li>
+      </ol>
+    </li>
+  </ol>
+  <h3 style="padding-left: 40px;"><strong>Edit the JavaScript files to pass the tests</strong></h3>
+  <ol style="line-height: 2.2;">
+    <li style="list-style-type: none;">
+      <ol style="line-height: 2.2;">
+        <li>Follow your README instructions</li>
+        <li>Follow along with the npm install output, making sure there are no installation errors</li>
+      </ol>
+    </li>
+  </ol>
+  <h3 style="padding-left: 40px;"><strong>&nbsp;</strong></h3>
+  <h3 style="padding-left: 40px;"><strong>When All tests pass</strong></h3>
+  <ol style="line-height: 2.2;">
+    <li style="list-style-type: none;">
+      <ol style="line-height: 2.2;">
+        <li style="list-style-type: none;">
+          <ol style="line-height: 2.2;">
+            <li><span style="color: #169179; font-size: 14pt;"><strong>CPR</strong></span>&nbsp;</li>
+            <li>Screenshot your Commits History page</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <h3 style="padding-left: 40px;"><strong>&nbsp;</strong></h3>
+  <h3 style="padding-left: 40px;"><strong>Critique This Assignment</strong></h3>
+  <p style="padding-left: 40px;">Give me a truthful estimate of the time you took on this project.</p>
+  <p style="padding-left: 40px;">Is there anything you liked or disliked about this assignment? Feel free to discuss
+    both your likes and dislikes (just make sure I can tell which is which 😉).</p>
+  <p style="padding-left: 40px;">How could this assignment be improved?</p>
+  <h2><strong>Assignment Submission Requirements</strong></h2>
+  <p style="padding-left: 40px;">When you have completed the assignment, submit a word document with the
+    following<strong>:</strong></p>
+  <ol style="line-height: 2.2;">
+    <li style="list-style-type: none;">
+      <ol style="line-height: 2.2;">
+        <li style="list-style-type: none;">
+          <ol style="line-height: 2.5;">
+            <li>screen shot the GitHub repo's commit "History" page</li>
+            <li>your critique</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <p style="padding-left: 40px;">Upload your word document to submit this assignment.</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>
+
+<body>
+
+</body>
+
+</html>
