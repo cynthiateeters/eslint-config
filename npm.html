@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESLint Config</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      max-width: 80ch;
+      font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="max-width: 95ch; line-height: 1.8; padding-left: 2rem;">
+    <h2>Package Managers, Linters, Style Guides, &amp; Formatters</h2>
+    The complexity of most production JavaScript projects would be a nightmare to create and maintain if it were not for
+    the tools that we have available. While some of the below listed tools have competitors, this list represents the
+    most
+    popular tools we currently have available to help automate different tasks.
+  </div>
+  <div style="max-width: 95ch; line-height: 1.8; padding-left: 2rem;">
+    <ul>
+      <li>NPM - package manager</li>
+      <li>ESLint - code error checker</li>
+      <li>Airbnb - code style guide</li>
+      <li>Prettier - code formatter</li>
+    </ul>
+    <p>Below you will find a description of each of these tools.</p>
+    <h3>The NPM Universe</h3>
+    <p style="text-align: center;"><img style="max-width: 100%; padding-right: 1rem;" src="images/new3Artboard 20.png"
+        alt="https://www.vecteezy.com/free-vector/planet&quot;&gt;Planet Vectors by Vecteezy" width="320" height="320"
+        data-api-endpoint="https://raritanval.instructure.com/api/v1/courses/3328453/files/217972463"
+        data-api-returntype="File" /></p>
+    <p style="text-align: center;"><span style="font-size: 10pt;">Illustration by <a class="inline_disabled"
+          href="https://www.vecteezy.com/vector-art/234879-cute-universe-with-planets-and-lettering-with-quote"
+          target="_blank" rel="noopener">WaterAndWine</a></span></p>
+    <p style="overflow: auto;">&nbsp;</p>
+    <p style="overflow: auto;">Even though JavaScript code will run natively in the browser or by executing it with
+      node,
+      modern developers need a working understanding of how to make our way around the NPM universe.</p>
+    <p>The trick is to know that:</p>
+    <div style="display: flex;">
+      <p style="margin: auto; padding: 1rem; border: 4px double green; width: max-content;">All roads lead to and from
+        the
+        package.json file.</p>
+    </div>
+    <p>&nbsp;</p>
+    <p>Not only does package.json give instructions to npm on how a project gets tested and/or built, it is also meant
+      to
+      be readable (and editable) by developers to get a working project.</p>
+    <p>&nbsp;</p>
+    <h4><strong>What is meant by the json extension</strong></h4>
+    <p>The phrase json (properly pronounced jay-sun, not jays-on) comes from JavaScript Object Notation. Douglas
+      Crockford
+      created the json file format in the early 2000s to store data in a simple human-readable format. While it was
+      created for JavaScript, its usefulness and popularity have made it a standard file format for other languages and
+      uses as well.</p>
+    <p>So, json is based on JavaScript objects but is not exactly the same. You can get a full discussion of the jason
+      syntax at <a class="inline_disabled" href="https://www.w3schools.com/js/js_json_syntax.asp" target="_blank"
+        rel="noopener">w3schools</a> or at <a href="https://jsonapi.org/" target="_blank"
+        rel="noopener">https://jsonapi.org/</a>.</p>
+    <p>If you look at any package.json file, you'll see that everything is contained within a {} pair. Then you'll see
+      that there are name/value pairs. A name/value pair consists of the property name (in double quotes), followed by a
+      colon, followed by the value (in double quotes):&nbsp;</p>
+    <pre><code style="padding: 0.25rem; width: max-content;">"test": "jest"</code></pre>
+    <p>Additionally, name/value pairs can be collected into groups using another set of {} and commas:</p>
+    <pre><code style="padding: 0.25rem; width: max-content;">"scripts": {
+    "test": "jest",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
+  },
+</code></pre>
+    <p>The above snippet from a package.json file shows that the property named "scripts" is a list of commands that npm
+      can run when asked. For complex projects, a package.json file may have a long list of scripts.</p>
+    <p>NOTE: The json datatype is also extremely important as the most common way for a server to serve data to a client
+      using <a class="inline_disabled" href="https://www.redhat.com/en/topics/api/what-is-a-rest-api" target="_blank"
+        rel="noopener">REST APIs</a>.</p>
+    <p>&nbsp;</p>
+    <h3><strong>What is code linting and eslint</strong></h3>
+    <p>Linting is the automated process of scanning and analyzing code looking for errors and non-adherence to
+      best-practice standards.</p>
+    <div style="margin-left: 40px; padding: 1rem; border: 1px solid #030303; width: max-content;"><iframe
+        title="YouTube video player" src="https://www.youtube.com/embed/HDQXWr5TOnI" width="560" height="315"
+        allowfullscreen="allowfullscreen"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+    <p>&nbsp;Here is a list of positives when using a linter:</p>
+    <ul>
+      <li>find buggy code from syntax errors and typos</li>
+      <li>highlight potential logical errors</li>
+      <li>highlight dangerous (like using the eval function)</li>
+      <li>flag non-adherence to coding style guide standards and conventions</li>
+      <li>stop you from committing buggy code that will cause issues later</li>
+    </ul>
+    <p>The npm package called eslint is currently the most popular linter for JavaScript. It is popular because of its
+      flexibility and its wonderful documentation at <a href="https://eslint.org/" target="_blank"
+        rel="noopener">https://eslint.org/</a>.&nbsp;</p>
+    <p>&nbsp;</p>
+    <h4><strong>Eslint runs from a configuration file</strong></h4>
+    <p>Eslint operates from an exhaustive set of rules that you can find at <a href="https://eslint.org/docs/rules/"
+        target="_blank" rel="noopener">https://eslint.org/docs/rules/</a>. These rules cover code practices that can be
+      problematic.&nbsp;</p>
+    <p>Many of these rules can have situations where breaking the rule is not only permissible, but preferred.</p>
+    <p>For example, production code meant for the browser should normally not have console.log() statements in them. It
+      is
+      not considered best practice.&nbsp; You can find the no-console rule in the documentation at <a
+        href="https://eslint.org/docs/rules/no-console" target="_blank"
+        rel="noopener">https://eslint.org/docs/rules/no-console</a>&nbsp;</p>
+    <p>In other situations, like running a node app, console.log() is expected, which means that rule has to be turned
+      off.</p>
+    <p>Choosing to define console.log() as an error or not is only one example. Each project will have its own do's and
+      don'ts when it comes to writing good code.</p>
+    <p>For this reason, an eslint installation expects ways to configure it to help define what should be enforced and
+      to
+      what level of enforcement these rules should have.</p>
+    <p>&nbsp;</p>
+    <h4><strong>The eslint configuration file</strong></h4>
+    <p>To put it simply, eslint is not easy to configure. Luckily, it does have a tool to help you get started.</p>
+    <p>When you run <code>npx eslint --init</code> from the command line, it will ask you questions and write a useable
+      configuration file from your answers. That makes a good starting point. <a
+        href="https://eslint.org/docs/user-guide/configuring/" target="_blank"
+        rel="noopener">https://eslint.org/docs/user-guide/configuring/</a>&nbsp;</p>
+    <p>The configuration file will typically be in the root folder of your project. Unfortunately, the format of the
+      file
+      can differ depending on the developer's preferences. <a
+        href="https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats"
+        target="_blank"
+        rel="noopener">https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats</a>&nbsp;
+    </p>
+    <p><strong><span style="color: #169179;">The preference format for the eslint configuration file for this class is
+          .eslintrc.json</span></strong></p>
+    <p>Here is an example <a class="inline_disabled"
+        href="https://gist.github.com/cynthiateeters/9a95c06f8e1a4a713e0194fb07df84c8" target="_blank"
+        rel="noopener">.eslintrc.json file</a> &nbsp;</p>
+    <p>Open it up and take a look. You can tell it is probably for a node project because it turns off the no-console
+      rule.</p>
+    <p>&nbsp;</p>
+    <h4><strong>Eslint has a VS Code extension</strong></h4>
+    <p>You can combine eslint with its VS Code extension of the same name. <a
+        href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" target="_blank"
+        rel="noopener">https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint</a>&nbsp;</p>
+    <p><span style="color: #169179;"><strong>NOTE: the extension needs the tool installed and configured before it will
+          work.</strong></span></p>
+    <p>The eslint extension takes eslint's configuration and applies it to the code when it is open inside your editor.
+    </p>
+    <p>&nbsp;</p>
+    <h4><strong>The squigglies and making them disappear</strong></h4>
+    <p>If the eslint extension finds a problem, it puts a colored squiggly line underneath anything that does not adhere
+      to that long list of rules.</p>
+    <p>Red means the code is considered to be an error and yellow is a warning.</p>
+    <p>&nbsp;<img src="images/red-squiggly-1.png" alt="example of a red squiggly error" width="257" height="61"
+        data-api-endpoint="https://raritanval.instructure.com/api/v1/courses/3328453/files/217992562"
+        data-api-returntype="File" /></p>
+    <p>When you <strong>hover the mouse over a squiggly</strong>, the extension will tell you about one or more
+      problems.
+    </p>
+    <p><img src="images/red-squiggly-hover.png" alt="shows hover when mouse is on red squiggly" width="434" height="108"
+        data-api-endpoint="https://raritanval.instructure.com/api/v1/courses/3328453/files/217992654"
+        data-api-returntype="File" /></p>
+    <p>So, this example shows that using the var keyword is breaking the no-var rule that is currently set to "error".
+      The
+      suggestion is to use either let or const.</p>
+    <p>In fact, this one line of code has 2 errors, as we will see in the next screen shot.</p>
+    <p>In the hover pop-up, you are given two links. The first link "View Problem" will open up the rule into a larger
+      popup.</p>
+    <p>The second link opens up a pull-down set of actions that you can take to make the red squiggly go away.</p>
+    <p><img src="images/eslint-actions.png" alt="list of actions the eslint extension can take" width="406" height="255"
+        data-api-endpoint="https://raritanval.instructure.com/api/v1/courses/3328453/files/217992949"
+        data-api-returntype="File" /></p>
+    <p><span style="color: #169179;"><strong>And, yes, best practice says you need to make each and every squiggly go
+          away
+          as soon as possible.</strong></span></p>
+    <p>If at all possible, my go-to action is "Fix all auto-fixable..." or "Fix this..."</p>
+    <p>When I choose to fix this example, the var is automatically changed to a const.</p>
+    <p>That reveals my second error: <code style="padding: 0.25rem;">example</code> appears no other place in the code
+      and
+      is, therefore, unused. There is no quick fix for this. I have to now think why I have an unused variable and what
+      should be done about it.</p>
+    <p>&nbsp;</p>
+    <h4><strong>Eslint comments to disable rules</strong></h4>
+    <p><span style="color: #169179;"><strong>NOTE: You should only disable rules when you know why you are doing
+          disabling.</strong></span></p>
+    <p>The above screen shot shows actions that start with the word "Disable". These actions, if chosen, will
+      automatically place an eslint comment that disables the rule.</p>
+    <p>Remember, if you need to disable (turn off) a rule for a whole project, you should put that into the
+      .eslintrc.json
+      file.</p>
+    <p>If you need to disable a rule per file, the comment goes at the top of the file.</p>
+    <p><img src="images/eslint-file-disable.png" alt="screen shot of eslint comments at the top of file" width="429"
+        height="121" data-api-endpoint="https://raritanval.instructure.com/api/v1/courses/3328453/files/217994063"
+        data-api-returntype="File" /></p>
+    <p>If you want eslint to ignore a rule for only one line of code, the comment can go right before the line.</p>
+    <p><img src="images/eslint-disable-one-line.png" alt="screen shot use eslint comment to disable one line"
+        width="493" height="65"
+        data-api-endpoint="https://raritanval.instructure.com/api/v1/courses/3328453/files/217994215"
+        data-api-returntype="File" /></p>
+    <p>These eslint comments are super because, not only do they inform the eslint tool, they also inform other coders
+      as
+      to what assumptions have been made.</p>
+    <p>&nbsp;</p>
+    <h3><strong>What are code style guides and Airbnb</strong></h3>
+    <p>A style guide is a set of standards adopted by an organization to standardize the development of a product and
+      reduce inconsistencies. In web development you can have design style guides where the organization has dictated
+      properties like allowable color, typography, buttons, etc.</p>
+    <p>You can also have coding style guides that dictate how code is written. The most popular JavaScript style guide
+      is
+      the one created and maintained by Airbnb, <a href="https://github.com/airbnb/javascript" target="_blank"
+        rel="noopener">https://github.com/airbnb/javascript</a>. This style guide is remarkably well-written and reading
+      their rules can help one learn JavaScript. For each rule there is a discussion of why followed by both bad and
+      good
+      examples.</p>
+    <h3><strong>&nbsp;</strong></h3>
+    <h3><strong>What are code formatters and Prettier</strong></h3>
+    <p>Let's say different lines of your code have extra spaces inserted here and there and in other places you haven't
+      necessarily used spaces. The JavaScript engine ignores extra whitespace, so this is not a code error.</p>
+    <p>These lines could be a problem if you have adopted a style guide where allowable spaces are defined. You could go
+      over over each line fixing these problems manually. But, oh, what a pain.&nbsp;</p>
+    <p>Welcome code formatters. Just like linters automatically check code for errors, formatters automatically fix code
+      for violations to a style guide.</p>
+    <p>Prettier, which has a VS Code extension, has become the most popular formatter. You can configure Prettier to
+      work
+      as you type, as you save a file, and before you commit changes to your repo. A common choice is to select "Format
+      on
+      save" in your VS Code settings.&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+</body>
+
+</html>
